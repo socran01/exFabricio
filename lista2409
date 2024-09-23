@@ -1,0 +1,130 @@
+//Exercício 01:
+import java.util.Scanner;
+
+
+class ex01 {
+  public static void main(String[] args) {
+
+    
+    int n;
+    
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("Digite um número inteiro:");
+    n = input.nextInt();
+    
+    for(int x =0; x < 100; x++){
+    
+    System.out.println(x+1  + n);
+    
+    }
+  }
+}
+
+//Exercício 02:
+
+import java.util.Scanner;
+
+class ex02 {
+  public static void main(String[] args) {
+
+      double A;
+        int B;
+        double resultado = 0;
+
+        Scanner input = new Scanner(System.in);
+
+        
+        System.out.print("Insira um número real: ");
+        A = input.nextDouble();
+        System.out.print("Insira um número inteiro: ");
+        B = input.nextInt();
+
+       
+        for (int i = 0; i < B; i++) {
+            resultado += A;
+        }
+
+        System.out.println("A multiplicação de " + A + " por " + B + " é: " + resultado);
+    }
+}
+
+
+ //Exercício 03:
+
+import java.util.Scanner;
+
+  class ex03 {
+    public static void main(String[] args) {
+
+      
+        Scanner input = new Scanner(System.in); 
+        Double materialRadioativo;
+        
+        System.out.print("Insira a quantidade inicial de material radioativo (em gramas): ");
+        materialRadioativo = input.nextDouble();
+
+        double limite = 0.10;
+        int tempo = 0;
+
+        
+        do { 
+            materialRadioativo -= materialRadioativo * 0.25; 
+            tempo += 30; 
+        } while (materialRadioativo >= limite); 
+
+        
+        System.out.println("Tempo necessário para que a massa seja menor que 0,10 gramas: " + tempo + " segundos.");
+    }
+}
+
+
+ //Exercício04:
+
+import java.util.Scanner;
+
+
+class ex04 {
+  public static void main(String[] args) {
+    
+    
+    
+ 
+   int numero;
+        int somaPares = 0;
+        int produtoImpares = 1; 
+        boolean temImpar = false; 
+
+    
+    Scanner input = new Scanner(System.in);
+    
+       
+        do {
+            System.out.print("Digite um número inteiro positivo (ou negativo para encerrar): ");
+            numero = input.nextInt();
+
+           
+            if (numero < 0) {
+                break;
+            }
+
+            
+            if (numero % 2 == 0) {
+                somaPares += numero; 
+            } else {
+                produtoImpares *= numero; 
+                temImpar = true; 
+            }
+        } while (numero >= 0);
+
+        
+        System.out.println("Soma dos números pares: " + somaPares);
+
+        
+        if (temImpar) {
+            System.out.println("Produto dos números ímpares: " + produtoImpares);
+        } else {
+            System.out.println("Nenhum número ímpar foi inserido.");
+        }
+    }
+}
